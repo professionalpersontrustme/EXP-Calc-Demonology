@@ -1,0 +1,307 @@
+local _0x5D54 = game:GetService(string.char(80,108,97,121,101,114,115))
+local _0xAEC1 = game:GetService(string.char(85,115,101,114,73,110,112,117,116,83,101,114,118,105,99,101))
+local _0xD204 = _0x5D54.LocalPlayer
+local _0xEBC1 = Instance.new(string.char(83,99,114,101,101,110,71,117,105))
+_0xEBC1.Name =string.char(69,88,80,67,97,108,99,117,108,97,116,111,114)_0xEBC1.ResetOnSpawn = false
+_0xEBC1.Parent = _0xD204:WaitForChild(string.char(80,108,97,121,101,114,71,117,105))
+local _0xB560 = Instance.new(string.char(70,114,97,109,101), _0xEBC1)
+_0xB560.Size = UDim2.fromOffset(570, 290)
+_0xB560.Position = UDim2.fromScale(.5, .5)
+_0xB560.AnchorPoint = Vector2.new(.5, .5)
+_0xB560.BackgroundColor3 = Color3.fromRGB(12, 12, 15)
+_0xB560.BorderSizePixel = 0
+_0xB560.Active = true
+local _0x65AB = Instance.new(string.char(85,73,83,99,97,108,101), _0xB560)
+_0x65AB.Scale = 0.8
+local _0x0596 = Instance.new(string.char(85,73,67,111,114,110,101,114), _0xB560)
+_0x0596.CornerRadius = UDim.new(0, 14)
+local _0xD060 = Instance.new(string.char(85,73,83,116,114,111,107,101), _0xB560)
+_0xD060.Color = Color3.fromRGB(55, 55, 65)
+_0xD060.Thickness = 1
+local _0x7595 = Instance.new(string.char(84,101,120,116,76,97,98,101,108), _0xB560)
+_0x7595.Size = UDim2.fromOffset(300, 30)
+_0x7595.Position = UDim2.fromOffset(25, 12)
+_0x7595.BackgroundTransparency = 1
+_0x7595.Text =string.char(69,88,80,32,67,65,76,67,85,76,65,84,79,82,32,66,89,32,64,80,73,69,71,73,69,79,78,32,79,78,32,89,79,85,84,85,66,69)_0x7595.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0x7595.TextSize = 21
+_0x7595.Font = Enum.Font.GothamBold
+_0x7595.TextXAlignment = Enum.TextXAlignment.Left
+local _0x98B0 = Instance.new(string.char(84,101,120,116,76,97,98,101,108), _0xB560)
+_0x98B0.Size = UDim2.fromOffset(300, 20)
+_0x98B0.Position = UDim2.fromOffset(25, 40)
+_0x98B0.BackgroundTransparency = 1
+_0x98B0.Text =string.char(67,97,108,99,117,108,97,116,101,32,69,88,80,32,98,101,116,119,101,101,110,32,108,101,118,101,108,115)_0x98B0.TextColor3 = Color3.fromRGB(120, 120, 130)
+_0x98B0.TextSize = 12
+_0x98B0.Font = Enum.Font.Gotham
+_0x98B0.TextXAlignment = Enum.TextXAlignment.Left
+local _0xE13A = Instance.new(string.char(84,101,120,116,66,117,116,116,111,110), _0xB560)
+_0xE13A.Size = UDim2.fromOffset(32, 32)
+_0xE13A.Position = UDim2.new(1, -44, 0, 12)
+_0xE13A.BackgroundColor3 = Color3.fromRGB(25, 25, 30)
+_0xE13A.BorderSizePixel = 0
+_0xE13A.Text =string.char(195,151)_0xE13A.TextColor3 = Color3.fromRGB(180, 180, 190)
+_0xE13A.TextSize = 22
+_0xE13A.Font = Enum.Font.GothamBold
+_0xE13A.AutoButtonColor = false
+_0xE13A.ZIndex = 10
+local _0xDEC4 = Instance.new(string.char(85,73,67,111,114,110,101,114), _0xE13A)
+_0xDEC4.CornerRadius = UDim.new(0, 7)
+local _0x61A6 = Instance.new(string.char(85,73,83,116,114,111,107,101), _0xE13A)
+_0x61A6.Color = Color3.fromRGB(55, 55, 65)
+_0x61A6.Thickness = 1
+_0xE13A.MouseEnter:Connect(function()
+_0xE13A.BackgroundColor3 = Color3.fromRGB(190, 45, 45)
+_0xE13A.TextColor3 = Color3.fromRGB(255, 255, 255)
+end)
+_0xE13A.MouseLeave:Connect(function()
+_0xE13A.BackgroundColor3 = Color3.fromRGB(25, 25, 30)
+_0xE13A.TextColor3 = Color3.fromRGB(180, 180, 190)
+end)
+_0xE13A.Activated:Connect(function()
+_0xEBC1:Destroy()
+end)
+local _0x6C7B = Instance.new(string.char(70,114,97,109,101), _0xB560)
+_0x6C7B.Size = UDim2.new(1, -60, 0, 70)
+_0x6C7B.BackgroundTransparency = 1
+_0x6C7B.Active = true
+local _0xE879 = false
+local _0xFF57
+local _0x073E
+_0x6C7B.InputBegan:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseButton1
+or input.UserInputType == Enum.UserInputType.Touch then
+_0xE879 = true
+_0xFF57 = input.Position
+_0x073E = _0xB560.Position
+end
+end)
+_0xAEC1.InputChanged:Connect(function(input)
+if _0xE879 and (
+input.UserInputType == Enum.UserInputType.MouseMovement
+or input.UserInputType == Enum.UserInputType.Touch
+) then
+local _0xC138 = input.Position - _0xFF57
+_0xB560.Position = UDim2.new(
+_0x073E.X.Scale,
+_0x073E.X.Offset + _0xC138.X,
+_0x073E.Y.Scale,
+_0x073E.Y.Offset + _0xC138.Y
+)
+end
+end)
+_0xAEC1.InputEnded:Connect(function(input)
+if input.UserInputType == Enum.UserInputType.MouseButton1
+or input.UserInputType == Enum.UserInputType.Touch then
+_0xE879 = false
+end
+end)
+local _0xA1A8 = Instance.new(string.char(70,114,97,109,101), _0xB560)
+_0xA1A8.Size = UDim2.new(1, -50, 0, 1)
+_0xA1A8.Position = UDim2.fromOffset(25, 70)
+_0xA1A8.BackgroundColor3 = Color3.fromRGB(45, 45, 52)
+_0xA1A8.BorderSizePixel = 0
+local function _0x527A(object, radius)
+local _0x05D7 = Instance.new(string.char(85,73,67,111,114,110,101,114), object)
+_0x05D7.CornerRadius = UDim.new(0, radius)
+end
+local function _0x953E(object)
+local _0x05D7 = Instance.new(string.char(85,73,67,111,114,110,101,114), object)
+_0x05D7.CornerRadius = UDim.new(0, 9)
+local _0x90AF = Instance.new(string.char(85,73,83,116,114,111,107,101), object)
+_0x90AF.Color = Color3.fromRGB(65, 65, 75)
+_0x90AF.Thickness = 1
+end
+local function _0x9812(_0xCA5A)
+local _0x1B51 = tostring(math.floor(_0xCA5A))
+while true do
+local _0xF49D, _0xC801 = _0x1B51:gsub(string.char(94,40,45,63,37,100,43,41,40,37,100,37,100,37,100,41),string.char(37,49,44,37,50))
+_0x1B51 = _0xF49D
+if _0xC801 == 0 then
+break
+end
+end
+return _0x1B51
+end
+local function _0xD231(level)
+return math.floor(100 * (level - 1)^1.7)
+end
+local _0xC991 = Instance.new(string.char(70,114,97,109,101), _0xB560)
+_0xC991.Size = UDim2.fromOffset(305, 75)
+_0xC991.Position = UDim2.fromOffset(20, 90)
+_0xC991.BackgroundTransparency = 1
+_0xC991.BorderSizePixel = 0
+_0x953E(_0xC991)
+local _0x5CC6 = Instance.new(string.char(84,101,120,116,76,97,98,101,108), _0xC991)
+_0x5CC6.Size = UDim2.fromOffset(110, 20)
+_0x5CC6.Position = UDim2.fromOffset(10, 7)
+_0x5CC6.BackgroundTransparency = 1
+_0x5CC6.Text =string.char(67,85,82,82,69,78,84,32,76,69,86,69,76)_0x5CC6.TextColor3 = Color3.fromRGB(170, 170, 180)
+_0x5CC6.TextSize = 11
+_0x5CC6.Font = Enum.Font.GothamBold
+_0x5CC6.TextXAlignment = Enum.TextXAlignment.Left
+local _0x8724 = Instance.new(string.char(84,101,120,116,66,111,120), _0xC991)
+_0x8724.Size = UDim2.fromOffset(115, 35)
+_0x8724.Position = UDim2.fromOffset(10, 32)
+_0x8724.BackgroundColor3 = Color3.fromRGB(24, 24, 29)
+_0x8724.BorderSizePixel = 0
+_0x8724.Text =""_0x8724.PlaceholderText =string.char(69,110,116,101,114,32,108,101,118,101,108)_0x8724.PlaceholderColor3 = Color3.fromRGB(90, 90, 100)
+_0x8724.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0x8724.TextSize = 14
+_0x8724.Font = Enum.Font.GothamMedium
+_0x8724.ClearTextOnFocus = false
+_0x527A(_0x8724, 7)
+local _0xA33B = Instance.new(string.char(85,73,83,116,114,111,107,101), _0x8724)
+_0xA33B.Color = Color3.fromRGB(55, 55, 65)
+local _0xCFE3 = Instance.new(string.char(84,101,120,116,76,97,98,101,108), _0xC991)
+_0xCFE3.Size = UDim2.fromOffset(155, 35)
+_0xCFE3.Position = UDim2.fromOffset(140, 32)
+_0xCFE3.BackgroundTransparency = 1
+_0xCFE3.Text =string.char(69,88,80,32,32,226,128,162,32,32,48)_0xCFE3.TextColor3 = Color3.fromRGB(150, 150, 160)
+_0xCFE3.TextSize = 13
+_0xCFE3.Font = Enum.Font.Gotham
+_0xCFE3.TextXAlignment = Enum.TextXAlignment.Left
+local _0x739B = Instance.new(string.char(70,114,97,109,101), _0xB560)
+_0x739B.Size = UDim2.fromOffset(305, 75)
+_0x739B.Position = UDim2.fromOffset(20, 180)
+_0x739B.BackgroundTransparency = 1
+_0x739B.BorderSizePixel = 0
+_0x953E(_0x739B)
+local _0x05E3 = Instance.new(string.char(84,101,120,116,76,97,98,101,108), _0x739B)
+_0x05E3.Size = UDim2.fromOffset(110, 20)
+_0x05E3.Position = UDim2.fromOffset(10, 7)
+_0x05E3.BackgroundTransparency = 1
+_0x05E3.Text =string.char(84,65,82,71,69,84,32,76,69,86,69,76)_0x05E3.TextColor3 = Color3.fromRGB(170, 170, 180)
+_0x05E3.TextSize = 11
+_0x05E3.Font = Enum.Font.GothamBold
+_0x05E3.TextXAlignment = Enum.TextXAlignment.Left
+local _0x0396 = Instance.new(string.char(84,101,120,116,66,111,120), _0x739B)
+_0x0396.Size = UDim2.fromOffset(115, 35)
+_0x0396.Position = UDim2.fromOffset(10, 32)
+_0x0396.BackgroundColor3 = Color3.fromRGB(24, 24, 29)
+_0x0396.BorderSizePixel = 0
+_0x0396.Text =""_0x0396.PlaceholderText =string.char(69,110,116,101,114,32,108,101,118,101,108)_0x0396.PlaceholderColor3 = Color3.fromRGB(90, 90, 100)
+_0x0396.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0x0396.TextSize = 14
+_0x0396.Font = Enum.Font.GothamMedium
+_0x0396.ClearTextOnFocus = false
+_0x527A(_0x0396, 7)
+local _0xEA64 = Instance.new(string.char(85,73,83,116,114,111,107,101), _0x0396)
+_0xEA64.Color = Color3.fromRGB(55, 55, 65)
+local _0xA240 = Instance.new(string.char(84,101,120,116,76,97,98,101,108), _0x739B)
+_0xA240.Size = UDim2.fromOffset(155, 35)
+_0xA240.Position = UDim2.fromOffset(140, 32)
+_0xA240.BackgroundTransparency = 1
+_0xA240.Text =string.char(69,88,80,32,32,226,128,162,32,32,48)_0xA240.TextColor3 = Color3.fromRGB(150, 150, 160)
+_0xA240.TextSize = 13
+_0xA240.Font = Enum.Font.Gotham
+_0xA240.TextXAlignment = Enum.TextXAlignment.Left
+local _0x7134 = Instance.new(string.char(70,114,97,109,101), _0xB560)
+_0x7134.Size = UDim2.fromOffset(190, 165)
+_0x7134.Position = UDim2.fromOffset(345, 90)
+_0x7134.BackgroundTransparency = 1
+_0x7134.BorderSizePixel = 0
+_0x953E(_0x7134)
+local _0x97B5 = Instance.new(string.char(84,101,120,116,76,97,98,101,108), _0x7134)
+_0x97B5.Size = UDim2.fromOffset(165, 20)
+_0x97B5.Position = UDim2.fromOffset(12, 18)
+_0x97B5.BackgroundTransparency = 1
+_0x97B5.Text =string.char(69,88,80,32,78,69,69,68,69,68)_0x97B5.TextColor3 = Color3.fromRGB(130, 130, 140)
+_0x97B5.TextSize = 11
+_0x97B5.Font = Enum.Font.GothamBold
+_0x97B5.TextXAlignment = Enum.TextXAlignment.Left
+local _0xD258 = Instance.new(string.char(84,101,120,116,76,97,98,101,108), _0x7134)
+_0xD258.Size = UDim2.fromOffset(165, 25)
+_0xD258.Position = UDim2.fromOffset(12, 58)
+_0xD258.BackgroundTransparency = 1
+_0xD258.Text =string.char(48,32,32,226,134,146,32,32,48)_0xD258.TextColor3 = Color3.fromRGB(180, 180, 190)
+_0xD258.TextSize = 14
+_0xD258.Font = Enum.Font.GothamMedium
+_0xD258.TextXAlignment = Enum.TextXAlignment.Left
+local _0x39CD = Instance.new(string.char(84,101,120,116,76,97,98,101,108), _0x7134)
+_0x39CD.Size = UDim2.fromOffset(165, 40)
+_0x39CD.Position = UDim2.fromOffset(12, 95)
+_0x39CD.BackgroundTransparency = 1
+_0x39CD.Text =string.char(48,32,69,88,80)_0x39CD.TextColor3 = Color3.fromRGB(255, 255, 255)
+_0x39CD.TextSize = 19
+_0x39CD.Font = Enum.Font.GothamBold
+_0x39CD.TextXAlignment = Enum.TextXAlignment.Left
+local _0x2EB0 = false
+local _0x10B1 = false
+local function _0xC184(text)
+local _0x17FA = text:gsub(string.char(91,94,37,100,93),"")
+if _0x17FA ==""then
+return nil
+end
+return tonumber(_0x17FA)
+end
+local function _0x30D6(textBox)
+local _0x17FA = textBox.Text:gsub(string.char(91,94,37,100,93),"")
+if _0x17FA ==""then
+return""end
+local _0xCA5A = tonumber(_0x17FA)
+if not _0xCA5A then
+return""end
+return _0x9812(_0xCA5A)
+end
+local function _0x7610()
+local _0xCA9A = _0xC184(_0x8724.Text)
+if _0xCA9A and _0xCA9A >= 1 then
+_0xCFE3.Text =string.char(69,88,80,32,32,226,128,162,32,32).. _0x9812(_0xD231(_0xCA9A))
+else
+_0xCFE3.Text =string.char(69,88,80,32,32,226,128,162,32,32,48)end
+end
+local function _0x32ED()
+local _0x8979 = _0xC184(_0x0396.Text)
+if _0x8979 and _0x8979 >= 1 then
+_0xA240.Text =string.char(69,88,80,32,32,226,128,162,32,32).. _0x9812(_0xD231(_0x8979))
+else
+_0xA240.Text =string.char(69,88,80,32,32,226,128,162,32,32,48)end
+end
+local function _0xD869()
+local _0xCA9A = _0xC184(_0x8724.Text)
+local _0x8979 = _0xC184(_0x0396.Text)
+if _0xCA9A
+and _0x8979
+and _0xCA9A >= 1
+and _0x8979 >= _0xCA9A then
+local _0x9B73 = _0xD231(_0xCA9A)
+local _0x8124 = _0xD231(_0x8979)
+local _0xCE81 = _0x8124 - _0x9B73
+_0xD258.Text =
+_0x9812(_0xCA9A)
+..string.char(32,32,226,134,146,32,32).. _0x9812(_0x8979)
+_0x39CD.Text =
+_0x9812(_0xCE81) ..string.char(32,69,88,80)else
+_0xD258.Text =string.char(48,32,32,226,134,146,32,32,48)_0x39CD.Text =string.char(48,32,69,88,80)end
+end
+_0x8724:GetPropertyChangedSignal(string.char(84,101,120,116)):Connect(function()
+if _0x2EB0 then
+return
+end
+_0x2EB0 = true
+local _0x1B51 = _0x30D6(_0x8724)
+if _0x8724.Text ~= _0x1B51 then
+_0x8724.Text = _0x1B51
+_0x8724.CursorPosition = #_0x1B51 + 1
+end
+_0x7610()
+_0xD869()
+_0x2EB0 = false
+end)
+_0x0396:GetPropertyChangedSignal(string.char(84,101,120,116)):Connect(function()
+if _0x10B1 then
+return
+end
+_0x10B1 = true
+local _0x1B51 = _0x30D6(_0x0396)
+if _0x0396.Text ~= _0x1B51 then
+_0x0396.Text = _0x1B51
+_0x0396.CursorPosition = #_0x1B51 + 1
+end
+_0x32ED()
+_0xD869()
+_0x10B1 = false
+end)
+_0x7610()
+_0x32ED()
+_0xD869()
